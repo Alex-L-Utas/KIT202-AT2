@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Thomas Bates, Alex Lobley, Sam Haines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroMusings Corner</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/scrollToTop.js" defer></script>
+  <script src="js/validation.js" defer></script>
+  <script src="js/navDropdown.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+      <img id="logo" src="images/logo.webp" alt="Site logo">
+      <button id="nav-toggle" class="icon">&#9776;</button> 
+      <div id="nav-links">
+          <a href="index.html">Index</a>
+          <a href="archive.html">Archive</a>
+          <a href="about.html">About</a>
+          <a href="create.html">Create</a>
+          <a href="login.html"  id="current-page-button">Login</a>
+      </div>
+    </nav>
+
+    <img id="banner-image" src="images/library-banner.jpg" alt="Site banner">
+
+    <h1>MicroMusings Corner</h1>
+
+  </header>
+  <main>
+    <form id="login-form" class="forms" method="post" action="index.html" novalidate>
+      <label for="username" class="login-form">Username</label>
+      <input type="text" id="username" name="username" required>
+      <span class="error-message" id="error-username-login"></span>
+
+      <label for="password" class="login-form">Password</label>
+      <input type="password" id="password" name="password" required>
+      <span class="error-message" id="error-password-login"></span>
+
+      <p class="form-actions">
+        <button type="submit" class="button login-button">Login</button>
+        Not a member yet? <a href="registration.html">Register here</a>
+      </p>
+
+    </form>
+
+  </main>
+
+  <button id="scrollToTopBtn">Scroll to Top</button>
+
+  <footer>
+    <p>Assignment 1 Frontend | MicroMusings Corner</p>
+  </footer>
+</body>
+
+</html>

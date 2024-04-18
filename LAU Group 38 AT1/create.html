@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Thomas Bates, Alex Lobley, Sam Haines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroMusings Corner</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/scrollToTop.js" defer></script>
+  <script src="js/navDropdown.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+      <img id="logo" src="images/logo.webp" alt="Site logo">
+      <button id="nav-toggle" class="icon">&#9776;</button> 
+      <div id="nav-links">
+          <a href="index.html">Index</a>
+          <a href="archive.html">Archive</a>
+          <a href="about.html">About</a>
+          <a href="create.html" id="current-page-button">Create</a>
+          <a href="login.html">Login</a>
+      </div>
+    </nav>
+
+    <img id="banner-image" src="images/library-banner.jpg" alt="Site banner">
+
+    <h1>MicroMusings Corner</h1>
+
+  </header>
+
+  <main>
+  
+    <section id="create-form" class="bubble">
+      <h2> Create a Blogpost</h2>
+          <form class="forms create-form" method="post">
+
+            <label for="post-title" class="create-form">Title</label>
+            <input class="input" type="text" id="post-title" name="post-title" required>
+      
+            <label for="post-tags" class="create-form">Tags</label>
+            <textarea class="input" id="post-tags" name="post-tags" required></textarea>
+      
+            <label for="post-content" class="create-form">Content</label>
+            <textarea class="input" id="post-content" name="post-content" required></textarea>
+      
+            <p class="form-actions">
+              <button type="submit" class="button">Create</button>
+              <button type="reset" class="button">Reset</button>
+            </p>
+        </form>
+      </section>
+  </main>
+
+  <button id="scrollToTopBtn">Scroll to Top</button>
+
+  <footer>
+    <p>Assignment 1 Frontend | MicroMusings Corner</p>
+  </footer>
+</body>
+
+</html>

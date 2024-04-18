@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Thomas Bates, Alex Lobley, Sam Haines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroMusings Corner</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/validation.js" defer></script>
+  <script src="js/scrollToTop.js" defer></script>  
+  <script src="js/navDropdown.js" defer></script>
+</head>
+
+<body id="registration-page">
+  <header>
+    <!--Changed entire <nav> menu with a div for buttons and a button outside the div, havent copied into other files.-->
+    <nav id="nav">
+      <img id="logo" src="images/logo.webp" alt="Site logo">
+      <button id="nav-toggle" class="icon">&#9776;</button> 
+      <div id="nav-links">
+          <a href="index.html">Index</a>
+          <a href="archive.html">Archive</a>
+          <a href="about.html">About</a>
+          <a href="create.html">Create</a>
+          <a href="login.html" id="current-page-button">Login</a>
+      </div>
+    </nav>
+    <!--Changed entire <nav> menu with a div for buttons and a button outside the div, havent copied into other files.-->
+      
+    <img id="banner-image" src="images/library-banner.jpg" alt="Site banner">
+    
+    <h1>MicroMusings Corner</h1>
+
+  </header>
+  <main>
+
+    <form id="registration-form" class="forms" method="post" action="index.html" novalidate>
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" name="username" required>
+        <span class="error-message" id="error-username"></span>
+      
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="error-email"></span>
+      
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error-message" id="error-password"></span>
+      
+        <label for="confirm-password" class="form-label">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <span class="error-message" id="error-confirm-password"></span>
+      
+        <p class="form-actions">
+            <button type="submit" class="button">Register</button>
+            <button type="reset" class="button">Reset</button>
+        </p>
+    </form>
+
+  </main>
+
+  <button id="scrollToTopBtn">Scroll to Top</button>
+
+  <footer>
+    <p>Assignment 1 Frontend | MicroMusings Corner</p>
+  </footer>
+</body>
+
+</html>

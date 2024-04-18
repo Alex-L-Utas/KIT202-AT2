@@ -1,0 +1,360 @@
+
+/*
+Global Vars (mainly used as color palette)
+*/
+html {    
+    --background-color:rgb(60, 60, 60);
+    --bubble-color: rgb(115,115,115);
+    --foreground-color: rgb(255,252,235);
+    --highlight-color: lightsalmon;
+    --error-color: rgb(255, 0, 0);
+    --link-color: rgb(152, 188, 255);
+    --visited-color: rgb(229, 147, 226);
+
+    --default-fonts: Verdana, Geneva, Tahoma, sans-serif;
+    --font-size:12pt;
+}
+
+/* HTML Element tags*/
+
+body {
+    font-family: var(--default-fonts);
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    margin: 0px;
+}
+
+main {
+    margin: auto;
+    padding: 20px;
+}
+ 
+h1 {
+    margin: 20px;
+    padding: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+nav {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: right;
+    width: 100%;
+
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--foreground-color) !important; /*would not override default without*/
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    margin: 0px;
+    padding: 10px 30px;
+    align-items: right;
+}
+
+nav span {
+    width: 100%;
+}
+
+
+nav a:hover {
+    background-color: var(--foreground-color);
+    color: var(--background-color) !important;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    margin: 10px;
+    padding-left: 10px;
+}
+footer p {
+    text-align: center;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/:link*/
+a:link {
+    color: var(--link-color)
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/:visited*/
+a:visited {
+    color: var(--visited-color);
+}
+
+/*IDs*/
+
+#current-page-button {
+    color: var(--foreground-color);
+    background-color: var(--highlight-color);
+}
+#current-page-button:hover {
+    color: var(--highlight-color);
+    background-color: var(--foreground-color);
+}
+
+#authors ul {
+    list-style: none
+}
+
+#banner-image {
+    width:100%;
+    object-fit:cover;
+    height:200px;
+}
+
+#logo {
+    width: 40px;
+    object-fit:cover;
+    align-content: start;
+    margin:0px;
+    padding:0px;
+}
+
+#post-title {
+    font-size: 14pt;
+}
+
+#post-content {
+    width:100%;
+    height: 300px;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; 
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: lightsalmon;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 1; 
+}
+
+#nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: var(--foreground-color);
+    cursor: pointer;
+}
+
+#nav-toggle:hover {
+    background-color: var(--foreground-color);
+    color: var(--highlight-color)
+}
+
+#nav-links {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Classes */
+
+.highlight {
+    color: var(--highlight-color)
+}
+
+.button {
+    padding: 15px;
+    background-color: var(--highlight-color);
+    color: var(--foreground-color);    
+    border: none;
+    margin: 5px 0;
+    text-transform: uppercase; 
+    font-size: 12px;
+}
+:hover.button {
+    background-color: var(--foreground-color);
+    color: var(--highlight-color);
+}
+
+.hidden {
+    display:none;
+}
+
+.bubble {
+    background-color: var(--bubble-color);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+
+.collapse-toggle {
+    color:var(--link-color)
+}
+.collapse-toggle:hover {
+    color:var(--foreground-color);
+    cursor: pointer;
+}
+
+.taglist {
+    list-style: none;
+    padding: 0px;
+}
+
+.taglist li {
+    display: inline;
+    text-decoration: underline;
+    text-decoration-color: var(--highlight-color);
+}
+
+.taglist li::before {
+    content: "#";
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: auto 200px;
+    align-items: center;
+    gap: 10px;
+    justify-content: left;
+}
+
+.form-label
+{
+    grid-column: 1 / 2;
+}
+
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.error-message {
+    grid-column: 3 / 4; 
+    color: var(--error-color);
+}
+
+.error-field {
+    border-color: var(--error-color)
+}
+
+.create-form {
+    width: 100%;
+    font-family: var(--default-fonts);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.create-form .input {
+    width: 300px;
+    border-style:initial;
+    border-radius: 5px;        
+    background-color: var(--foreground-color);
+    font-family: var(--default-fonts);
+    resize: none;
+}
+
+.form-actions {
+    justify-content: center;
+    align-items: center;
+}
+
+.form-actions button {
+    width: 100px;
+}
+
+
+/* Mobile responsive design */
+@media (max-width: 800px) {
+    body {
+        margin: auto;
+    }
+
+    .forms {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #registration-page .form-actions {
+        flex-direction: row;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+        position: fixed;
+        top: 40px; 
+        left: 0;
+        right: 0;
+        background-color: var(--background-color);
+        z-index: 999;
+    }
+
+    #nav-links a {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    .create-form .input {
+        
+        width: 100%;
+        border-style:initial;
+        border-radius: 5px;    
+        background-color: var(--foreground-color);
+    }
+
+    .create-form {
+        width: 100%;
+        font-family: var(--default-fonts);
+        display: flex;
+        flex-direction:column;
+        gap: 5px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
